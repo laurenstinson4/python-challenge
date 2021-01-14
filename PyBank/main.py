@@ -57,12 +57,9 @@ with open(PyBank_path) as csvfile:
 
 
 	#Print results
-	print("Average Change: $" + str(round(avg_change)))
+	print("Average Change: $" + str(round(avg_change)) )
 	print("Greatest Increase in Profits: " + max_change_date + " ($" + str(max_change) + ")")
 	print("Greatest Decrease in Profits: " + min_change_date + " ($" + str(min_change) + ")")
-
-
-
 
 
 	#Writing to text file
