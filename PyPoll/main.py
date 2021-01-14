@@ -26,7 +26,6 @@ with open(PyPoll_path) as csvfile:
 	candidates = []
 	individual_votes = {}
 
-
 	#Begin loop to...
 	for row in PyPoll:
 
@@ -47,7 +46,7 @@ with open(PyPoll_path) as csvfile:
 	print("Total Votes: " + str(total_votes))
 	print("-----------------------------")
 
-	#Find results of votes for each individual candidate
+	#Find and print results of votes for each individual candidate
 	for candidate_name in individual_votes:
 		print(candidate_name + " " + str(round(((individual_votes[candidate_name]/total_votes)*100))) + "%" + " (" + str(individual_votes[candidate_name]) + ")")
 
@@ -57,8 +56,6 @@ with open(PyPoll_path) as csvfile:
 	winner = max(individual_votes, key=individual_votes.get)
 	print("Winner: " + winner)
 	print("-----------------------------")
-
-
 
 	#Writing to text file
 	print("Election Results", file=text_file)
